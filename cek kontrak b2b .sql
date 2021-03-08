@@ -1,6 +1,7 @@
 --test untuk git hub
 --ini test untuk git kedua
 -- int test git ketiga
+
 select contract_number,count(*) as jml_kontrak ,sum(premi)::money as premi from (
 select distinct b.sales_number,b.revision_number,attribute_value as contract_number,a.time_stamp,period1,period2,
 sum(amount2* case when balance='credit' then 1 else -1 end) as premi
